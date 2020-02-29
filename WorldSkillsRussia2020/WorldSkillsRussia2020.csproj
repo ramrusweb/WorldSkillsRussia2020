@@ -90,11 +90,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="handlers\ChangePass.cs">
+    <Compile Include="settings\security\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="handlers\ChangePass.Designer.cs">
-      <DependentUpon>ChangePass.cs</DependentUpon>
+    <Compile Include="settings\security\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="user\UserForm.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="accounts\signup\Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="handlers\ChangePass.resx">
-      <DependentUpon>ChangePass.cs</DependentUpon>
+    <EmbeddedResource Include="settings\security\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
@@ -188,5 +188,6 @@
     <None Include="images\icons8-name-100.png" />
     <None Include="images\icons8-name-100 %281%29.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
