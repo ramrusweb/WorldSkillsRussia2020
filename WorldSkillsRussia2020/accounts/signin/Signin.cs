@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorldSkillsRussia2020.admin;
 using WorldSkillsRussia2020.handlers;
+using WorldSkillsRussia2020.settings.security;
 using WorldSkillsRussia2020.Signup;
 
 namespace WorldSkillsRussia2020
@@ -96,8 +97,8 @@ namespace WorldSkillsRussia2020
             passChangeLb.Click += (s, a) =>
             {
                 Hide();
-                var changepass = new ChangePass();
-                changepass.Show();
+                var changepassword = new ChangePassword();
+                changepassword.Show();
             };
 
             // Обработчик кнопки - Войти.
@@ -110,32 +111,26 @@ namespace WorldSkillsRussia2020
 
                 // Экземпляры классов.
                 // Подключение к БД.
-                var dB = new DB();
-                var sqlDataAdapter = new SqlDataAdapter();
-                var dataTable = new DataTable();
+                var db = new DB();
+                var sda = new SqlDataAdapter();
+                var dt = new DataTable();
 
                 // Запрос в БД.
-                var sqlCommand = new SqlCommand("SELECT * FROM [Users] WHERE [Login]=@Login AND [Password]=@Password AND [Rights]=@Rights", dB.getConnection());
+                var sc = new SqlCommand("SELECT * FROM [Users] WHERE [Login]=@Login AND [Password]=@Password", db.getConnection());
 
                 // Заглушки для входных данных.
-                sqlCommand.Parameters.Add("@Login", SqlDbType.NVarChar).Value = login;
-                sqlCommand.Parameters.Add("@Password", SqlDbType.NVarChar).Value = password;
-                sqlCommand.Parameters.Add("@Rights", SqlDbType.NVarChar).Value = rights;
+                sc.Parameters.Add("@Login", SqlDbType.NVarChar).Value = login;
+                sc.Parameters.Add("@Password", SqlDbType.NVarChar).Value = password;
 
                 // Какая команда будет использоваться.
-                sqlDataAdapter.SelectCommand = sqlCommand;
+                sda.SelectCommand = sc;
 
                 // Запись входных данных в табличном представлении.
-                sqlDataAdapter.Fill(dataTable);
+                sda.Fill(dt);
 
                 // Проверка того, есть ли хоть 1 пользовать в БД.
-                if (dataTable.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
-
-                    //if (dataTable.)
-                    //{
-
-                    //}
                     Hide();
                     var userform = new UserForm();
                     userform.Show();
@@ -192,7 +187,7 @@ namespace WorldSkillsRussia2020
                 passwordField.Text = "";
                 timer.Enabled = false;
                 loginField.Focus();
-                timer.Interval = timer.Interval + 90000;
+                timer.Interval = timer.Interval + 20000;
             };
         }
     }

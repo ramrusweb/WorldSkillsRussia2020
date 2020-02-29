@@ -82,7 +82,7 @@ namespace WorldSkillsRussia2020.Signup
             signinLabel.Click += (s, a) =>
             {
                 Hide();
-                var signin = new ChangePass();
+                var signin = new Signin();
                 signin.Show();
             };
 

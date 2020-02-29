@@ -33,28 +33,26 @@
             this.passChangeLb = new System.Windows.Forms.Label();
             this.signinBtn = new System.Windows.Forms.Button();
             this.descAttempt = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.descTimer = new System.Windows.Forms.Label();
             this.signupLabel = new System.Windows.Forms.Label();
             this.passwordField = new System.Windows.Forms.TextBox();
+            this.pass_img = new System.Windows.Forms.PictureBox();
             this.loginField = new System.Windows.Forms.TextBox();
             this.bg_header = new System.Windows.Forms.Panel();
             this.signInWinState = new System.Windows.Forms.Label();
             this.xExit = new System.Windows.Forms.Label();
             this.header_text = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pass_img = new System.Windows.Forms.PictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bg_input.SuspendLayout();
-            this.bg_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass_img)).BeginInit();
+            this.bg_header.SuspendLayout();
             this.SuspendLayout();
             // 
             // bg_input
             // 
             this.bg_input.BackColor = System.Drawing.Color.Azure;
-            this.bg_input.Controls.Add(this.dateTimePicker1);
             this.bg_input.Controls.Add(this.passChangeLb);
             this.bg_input.Controls.Add(this.signinBtn);
             this.bg_input.Controls.Add(this.descAttempt);
@@ -113,6 +111,16 @@
             this.descAttempt.Size = new System.Drawing.Size(0, 25);
             this.descAttempt.TabIndex = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WorldSkillsRussia2020.Properties.Resources.icons8_name_100__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(36, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // descTimer
             // 
             this.descTimer.AutoSize = true;
@@ -146,6 +154,16 @@
             this.passwordField.Size = new System.Drawing.Size(399, 64);
             this.passwordField.TabIndex = 4;
             this.passwordField.UseSystemPasswordChar = true;
+            // 
+            // pass_img
+            // 
+            this.pass_img.Image = global::WorldSkillsRussia2020.Properties.Resources.iconfinder_lock_1814107;
+            this.pass_img.Location = new System.Drawing.Point(35, 226);
+            this.pass_img.Name = "pass_img";
+            this.pass_img.Size = new System.Drawing.Size(64, 64);
+            this.pass_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pass_img.TabIndex = 3;
+            this.pass_img.TabStop = false;
             // 
             // loginField
             // 
@@ -208,33 +226,6 @@
             this.header_text.Text = "Войти в систему";
             this.header_text.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WorldSkillsRussia2020.Properties.Resources.icons8_name_100__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(36, 127);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pass_img
-            // 
-            this.pass_img.Image = global::WorldSkillsRussia2020.Properties.Resources.iconfinder_lock_1814107;
-            this.pass_img.Location = new System.Drawing.Point(35, 226);
-            this.pass_img.Name = "pass_img";
-            this.pass_img.Size = new System.Drawing.Size(64, 64);
-            this.pass_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pass_img.TabIndex = 3;
-            this.pass_img.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(37, 335);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
-            // 
             // Signin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,10 +243,10 @@
             this.Text = "Войти в систему";
             this.bg_input.ResumeLayout(false);
             this.bg_input.PerformLayout();
-            this.bg_header.ResumeLayout(false);
-            this.bg_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pass_img)).EndInit();
+            this.bg_header.ResumeLayout(false);
+            this.bg_header.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -277,6 +268,5 @@
         private System.Windows.Forms.Label descAttempt;
         public System.Windows.Forms.Label passChangeLb;
         private System.Windows.Forms.Label header_text;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
